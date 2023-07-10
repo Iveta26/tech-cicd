@@ -42,11 +42,20 @@ Benefits of using Jenkins:
 
 <br />
 
+---
+
 The image below displays Jenkins in action. **Webhook Trigger** triggers an actions so that Jenkins can continuously deploy the code.
 
 ![Alt text](cicdImg/jenkins.jpg)
 
-Using SSH key to connect to our GitHub repository
+<br />
+
+### Using SSH key to connect to our GitHub repository
+
+![ssh to github](cicdImg/sshToGitHub.jpg)
+
+<br />
+
 1. Open the repository we wish to add the key to
 2. Click on "Settings" at the top
 
