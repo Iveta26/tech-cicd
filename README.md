@@ -26,10 +26,19 @@ This goes one step further than continuous delivery, with this practice, every c
 
 ---
 
-### Jenkins
+## Jenkins
 Jenkins is an open source automation server. It helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery.
 
-The image below displays Jenkins in action. **Webhook Trigger** triggers an actions so that Jenkins can continuously integrate the code.
+Benefits of using Jenkins:
+- It is an open-source tool with great community support.
+- It is easy to install.
+- It has 1000+ plugins.
+- It is free of cost.
+- It is built with Java and hence, it is portable to all the major platforms.
+
+<br />
+
+The image below displays Jenkins in action. **Webhook Trigger** triggers an actions so that Jenkins can continuously deploy the code.
 
 ![Alt text](cicdImg/jenkins.jpg)
 
