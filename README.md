@@ -46,6 +46,18 @@ The image below displays Jenkins in action. **Webhook Trigger** triggers an acti
 
 ![Alt text](cicdImg/jenkins.jpg)
 
+Using SSH key to connect to our GitHub repository
+1. Open the repository we wish to add the key to
+2. Click on "Settings" at the top
+
+![setting](cicdImg/settingsRepoKey.jpg)
+
+3. Click on "Deploy keys" on the let side
+
+![deploy key](cicdImg/deployKeyRepo.jpg)
+
+1. Put your generated public key and save it
+
 <br />
 
 ---
@@ -58,7 +70,7 @@ Webhook triggers are an automatic type of trigger that listens for a certain typ
 
 ---
 
-#### Other CICD tools
+### Other CICD tools
 
 ![cicd tools](cicdImg/cicdTools.jpg)
 
