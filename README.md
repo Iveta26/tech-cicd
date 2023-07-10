@@ -35,6 +35,10 @@ Benefits of using Jenkins:
 - It has 1000+ plugins.
 - It is free of cost.
 - It is built with Java and hence, it is portable to all the major platforms.
+  
+  <br />
+
+![Alt text](cicdImg/jenkinsTools.jpg)
 
 <br />
 
