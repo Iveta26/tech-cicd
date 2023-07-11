@@ -77,6 +77,9 @@ The image below displays Jenkins in action. **Webhook Trigger** triggers an acti
 
 Webhook triggers are an automatic type of trigger that listens for a certain type of data, much like event triggers. While event triggers are used for activating a trigger based on internal activity, webhooks are instead used when activating a trigger based on external activity.
 
+Setting it up in GitHub first
+
+
 <br />
 
 ---
@@ -90,3 +93,27 @@ Webhook triggers are an automatic type of trigger that listens for a certain typ
 
 ### Why build a pipeline?
 To fully automate the process of deployment. This can save days worh of time and prevent human error.
+
+
+
+### Connect to AWS
+
+![Alt text](cicdImg/jenkinsConnecttoAWS.jpg)
+
+
+![Alt text](cicdImg/Screenshot_1.jpg)
+
+
+![Alt text](cicdImg/Screenshot_2.jpg)
+
+
+![Alt text](cicdImg/Screenshot_3.jpg)
+
+Allowing npm commands to be used
+
+![Alt text](cicdImg/Screenshot_4.jpg)
+
+
+Running the tests 
+
+![Alt text](cicdImg/testsinJenkins.jpg)
