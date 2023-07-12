@@ -91,14 +91,10 @@ Setting it up in GitHub first
 
 ---
 
-### Why build a pipeline?
-To fully automate the process of deployment. This can save days worh of time and prevent human error.
-
-
 
 ### Connect to AWS
 
-Webhook for dev branch:
+**Webhook for dev branch:**
 1. Restrict where this project can be run
 2. Create a webhook in GitHub dev branch
 3. Provide repository link (SSH)
@@ -112,7 +108,7 @@ Webhook for dev branch:
 7. Trigger merge job if this job is done successfully
 
 
-Merging:
+**Merging:**
 1. Restrict where this project can be run
 2. Provide Project URL (HHTP)
 3. Provide repository link (SSH)
@@ -120,7 +116,7 @@ Merging:
 5. Post-build Actions add "Push Only If Build Succeeds" and "Merge Results"
 
 
-Deploying:
+**Deploying:**
 1. Restrict where this project can be run
 2. Provide Project URL (HHTP)
 3. Provide repository link (SSH)
