@@ -122,7 +122,27 @@ Setting it up in GitHub first
 3. Provide repository link (SSH)
 4. Main branch
 5. SSH Agent with pem key
-6. Rsync to VM
-    ```
-    rsync -avz -e "ssh -o StrictHostKeyChecking=no" app ubuntu@45.111.222.333:/home/ubuntu/sparta_app
-    ```
+6. Rsync to VM with public IP and run scripts from GitHub
+
+
+```
+
+rsync -avz -e "ssh -o StrictHostKeyChecking=no" app ubuntu@63.33.56.94:/home/ubuntu
+rsync -avz -e "ssh -o StrictHostKeyChecking=no" environment ubuntu@63.33.56.94:/home/ubuntu
+ssh -o "StrictHostKeyChecking=no" ubuntu@63.33.56.94 <<EOF
+	cd .
+    cd environment/app
+    chmod +x provisions.sh
+	sed -i -e 's/\r$//' provisions.sh
+	./provisions.sh
+    cd ~
+    cd app
+    npm install
+    pm2 kill
+    pm2 start app.js
+EOF
+
+```
+
+
+
