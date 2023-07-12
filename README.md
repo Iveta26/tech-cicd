@@ -98,22 +98,35 @@ To fully automate the process of deployment. This can save days worh of time and
 
 ### Connect to AWS
 
-![Alt text](cicdImg/jenkinsConnecttoAWS.jpg)
+Webhook for dev branch:
+1. Restrict where this project can be run
+2. Create a webhook in GitHub dev branch
+3. Provide repository link (SSH)
+4. Check GitHub Trigger
+5. Provide Node plugin
+6. Run the tests
+   ```
+   npm install
+   npm test 
+   ```
+7. Trigger merge job if this job is done successfully
 
 
-![Alt text](cicdImg/Screenshot_1.jpg)
+Merging:
+1. Restrict where this project can be run
+2. Provide Project URL (HHTP)
+3. Provide repository link (SSH)
+4. Add main and dev branches
+5. Post-build Actions add "Push Only If Build Succeeds" and "Merge Results"
 
 
-![Alt text](cicdImg/Screenshot_2.jpg)
-
-
-![Alt text](cicdImg/Screenshot_3.jpg)
-
-Allowing npm commands to be used
-
-![Alt text](cicdImg/Screenshot_4.jpg)
-
-
-Running the tests 
-
-![Alt text](cicdImg/testsinJenkins.jpg)
+Deploying:
+1. Restrict where this project can be run
+2. Provide Project URL (HHTP)
+3. Provide repository link (SSH)
+4. Main branch
+5. SSH Agent with pem key
+6. Rsync to VM
+    ```
+    rsync -avz -e "ssh -o StrictHostKeyChecking=no" app ubuntu@45.111.222.333:/home/ubuntu/sparta_app
+    ```
