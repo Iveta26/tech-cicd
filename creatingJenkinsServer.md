@@ -1,7 +1,10 @@
 # Creating Jenkins Server
 
-1. Create ec2
-2. ssh in
+1. Create ec2 with the following security group
+
+![security group](cicdImg/securityGroupJenkins.jpg)
+
+2. Ssh in
 
 3. Install java
 
@@ -23,7 +26,7 @@ sudo apt-get install jenkins
 
 ```
 
-5. Use to check if it's running
+5. Check if it's running
 
 ```
 sudo systemctl status jenkins
