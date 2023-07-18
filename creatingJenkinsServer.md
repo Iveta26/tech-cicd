@@ -40,7 +40,7 @@ sudo systemctl status jenkins
 ![JENKINS PASSWORD](cicdImg/jenkinsPassword.jpg)
 
 
-8. Install recommaneded plug-is
+8. Install recommaneded plug-ins
 
 9. Create account 
 
