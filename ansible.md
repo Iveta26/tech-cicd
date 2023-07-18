@@ -23,8 +23,8 @@ ls
 
 ```
 cd ~/.ssh
-17  sudo nano tech241.pem
-19  sudo chmod 400 tech241.pem
+sudo nano tech241.pem
+sudo chmod 400 tech241.pem
 ```
 
 
@@ -39,7 +39,7 @@ sudo ssh -i "tech241.pem" ubuntu@ec2-52-215-188-216.eu-west-1.compute.amazonaws.
 
 ```
 cd /etc/ansible/
-   	sudo nano hosts
+sudo nano hosts
 
 ```
 
@@ -49,7 +49,7 @@ cd /etc/ansible/
 
 ```
 sudo apt update -y
-   	sudo apt upgrade -y
+sudo apt upgrade -y
 
 ```
 
