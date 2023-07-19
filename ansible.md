@@ -1,5 +1,13 @@
 # Intro to Ansible
 
+Ansible is a suite of software tools that enables infrastructure as code. It is open-source and the suite includes software provisioning, configuration management, and application deployment functionality.
+
+Benefits of Ansible
+
+Flexible: You can orchestrate the entire application environment no matter where it's deployed. You can also customize it based on your needs. 
+
+Agentless: You don't need to install any other software or firewall ports on the client systems you want to automate.
+
 1.	Update and upgrade on all machines to check internet connection
 2.	Install ansible in the controller
 
