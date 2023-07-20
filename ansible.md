@@ -72,6 +72,8 @@ sudo ansible web -m ping
 ![PING PONG](cicdImg/selfStudyPing.jpg)
 
 
+---
+
 ## Playbook
 It's a file for YAML scripts
 
@@ -81,6 +83,9 @@ run the file:
 ```
 sudo ansible-playbook nginx-playbook.yml
 ```
+
+
+---
 
 Playbook for app:
 
@@ -115,6 +120,7 @@ Playbook for app:
 
 ```
 
+---
 
 Playbook for db:
 
@@ -143,5 +149,27 @@ Playbook for db:
 # ensure the db is running
 
 # chech the status if it's running or not ashoc
+
+  - name: Modify mongod.conf to change bindIp
+    lineinfile:
+      path: /etc/mongodb.conf
+      regexp: '^bind_ip'
+      line: 'bind_ip = 0.0.0.0'
+
+
+
+  - name: Restart Mongodb
+    service:
+      name: mongodb
+      state: restarted
+
+
+
+  - name: Starting Mongodb
+    service:
+      name: mongodb
+      state: started
+      enabled: yes
+
 
 ```
