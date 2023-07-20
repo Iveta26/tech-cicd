@@ -8,6 +8,9 @@ Flexible: You can orchestrate the entire application environment no matter where
 
 Agentless: You don't need to install any other software or firewall ports on the client systems you want to automate.
 
+
+---
+
 1.	Update and upgrade on all machines to check internet connection
 2.	Install ansible in the controller
 
