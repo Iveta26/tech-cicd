@@ -70,3 +70,78 @@ sudo ansible web -m ping
 ```
 
 ![PING PONG](cicdImg/selfStudyPing.jpg)
+
+
+## Playbook
+It's a file for YAML scripts
+
+
+in /etc/ansible create .yml playbook file
+run the file: 
+```
+sudo ansible-playbook nginx-playbook.yml
+```
+
+Playbook for app:
+
+```
+# why learn YAML - ansible uses YAML
+# playbooks are re usable and can be used on all the nodes
+# YAML file starts wirth --- three dashes
+---
+
+# which host to perform the task
+- hosts: web
+
+# see the logs by gathering facts
+  gather_facts: yes
+
+# admin (sudo) access
+  become: true
+
+# add the instructions - install nginx - web
+  tasks:
+  - name: Installing Nginx
+    apt: pkg=nginx state=present
+
+  tasks:
+  - name: Installing NodeJS
+    apt: pkg=nodejs state=present
+    apt: pkg=npm state=present
+    nmp start
+# ensure the status of nginx is actively running
+
+# adhoc command to check the status
+
+```
+
+
+Playbook for db:
+
+```
+---
+# create a playbook to install mongodb in db machine/instance
+
+# who will be host
+- hosts: db
+
+
+# get logs
+  gather_facts: yes
+
+# admin access
+  become: true
+
+# provide instructions - task
+  tasks:
+
+
+# install mongodb
+  - name: Installing Mongodb
+    apt: pkg=mongodb state=present
+
+# ensure the db is running
+
+# chech the status if it's running or not ashoc
+
+```
