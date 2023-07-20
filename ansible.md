@@ -2,6 +2,9 @@
 
 Ansible is a suite of software tools that enables infrastructure as code. It is open-source and the suite includes software provisioning, configuration management, and application deployment functionality.
 
+
+![ansible diagram](cicdImg/awsAnsibleDiagram.jpg)
+
 Benefits of Ansible
 
 Flexible: You can orchestrate the entire application environment no matter where it's deployed. You can also customize it based on your needs. 
