@@ -42,7 +42,7 @@ Some customers of Terraform include:
 ### Installation on Windows
 
 1. Install a package provided on Terraform website ([here](https://developer.hashicorp.com/terraform/downloads))
-2. Create Path environmental variable on your machine. Add the bath to your installed package. 
+2. Create Path environmental variable on your machine. Add the path to your installed package. 
     ```Control Panel``` -> ```System``` -> ```System settings``` -> ```Environment Variables```
 
 ![Alt text](cicdImg/envVarWind.jpg)
