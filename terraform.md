@@ -50,3 +50,13 @@ Some customers of Terraform include:
 3. Run ```terraform --version``` on your machine to test the installation
 
 ![Alt text](cicdImg/terraformVersion.jpg)
+
+
+---
+
+### Implementing Terraform and AWS
+
+![TERRAFORM](cicdImg/terraform.jpg)
+
+1. Using access and scret keys as we're not SSH into the VMs, but rather acessing AWS. Can be done with AWS CLI, ```aws configure```
+2. Configure .tf script
