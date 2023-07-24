@@ -58,5 +58,49 @@ Some customers of Terraform include:
 
 ![TERRAFORM](cicdImg/terraform.jpg)
 
-1. Using access and scret keys as we're not SSH into the VMs, but rather acessing AWS. Can be done with AWS CLI, ```aws configure```
-2. Configure .tf script
+![ec2](cicdImg/terraformCreateEC2.jpg)
+
+1. Using access and scret keys as we're not SSH into the VMs, but rather acessing AWS. Add these keys in ```Environment Variables``` as  ***aws_access_key_id*** and ***aws_secret_access_key***
+2. Create main.tf script (script below)
+3. ```terraform init```
+4. ```terraform plan```
+5. ```terraform apply```
+6. ```terraform destroy```
+
+
+### main.tf:
+
+```terraform
+# launch an ec2 instance
+# which cloud - aws
+# terraform downloads required dependancies
+# terraform init
+
+# provider name
+provider "aws"{
+        # which part of this AWS
+        region = "eu-west-1"
+
+}
+
+# Launch an ec2 in Ireland
+resource "aws_instance" "app_instance"{
+
+# which machine/OS version etc. AMI-id
+  ami = "ami-0943382e114f188e8"
+
+# what type of instance (micro)
+  instance_type = "t2.micro"
+
+# is the public IP required
+  associate_public_ip_address = true
+
+# what would you like to name it (iveta-tech241-terraforn-app)
+  tags = {
+       Name = "tech241-iveta-terraform-app"
+  }
+
+}
+
+
+```
